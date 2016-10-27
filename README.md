@@ -1,4 +1,4 @@
-# rungiect/cloudflare-railgun
+# rungeict/cloudflare-railgun
 Dockerfile for cloudflare's railgun
 
 ## Introduction
