@@ -24,11 +24,13 @@ https://www.cloudflare.com/website-optimization/railgun/
  
 ### Command Line
  ``` 
+ docker run --name railgun-memcached -d --restart=always memcached:latest
+ 
  docker run -d --name=railgun -p 2408:2408 -e RG_ACT_TOKEN=ENTERTOKENHERE \
  -e RG_ACT_HOST=192.0.2.1 \
  -e RG_LOG_LEVEL=1 \
  -e RG_WAN_PORT=2408 \
- --link memcached:memcached \
+ --link railgun-memcached:memcached \
  --restart=always \
  rungeict/cloudflare-railgun
  ```
