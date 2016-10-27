@@ -10,6 +10,9 @@ https://www.cloudflare.com/website-optimization/railgun/
 
 ## Deployment
 
+### Containers
+ - memcached:latest : memcached
+
 ### Ports
  - 2408/TCP
 
@@ -19,12 +22,13 @@ https://www.cloudflare.com/website-optimization/railgun/
  - RG_LOG_LEVEL   Logging Level : default: 1
  - RG_WAN_PORT    External Port : default: 2408
  
- ### Command Line
+### Command Line
  ``` 
  docker run -d --name=railgun -p 2408:2408 -e RG_ACT_TOKEN=ENTERTOKENHERE \
  -e RG_ACT_HOST=192.0.2.1 \
  -e RG_LOG_LEVEL=1 \
  -e RG_WAN_PORT=2408 \
+ --link memcached:memcached \
  --restart=always \
  rungeict/cloudflare-railgun
  ```
