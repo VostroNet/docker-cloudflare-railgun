@@ -10,6 +10,7 @@ ENV RG_WAN_PORT 2408
 ENV RG_LOG_LEVEL 0
 ENV RG_ACT_TOKEN ""
 ENV RG_ACT_HOST ""
+ENV RG_MEMCACHED_SERVERS "memcached:11211"
 
 RUN apt-get update && \
   apt-get install -y curl && \
