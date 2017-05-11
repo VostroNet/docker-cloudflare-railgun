@@ -33,7 +33,7 @@ ca.bundle = /etc/ssl/railgun-ca-certs.crt
 #
 # Multiple memcached servers (host:port format) can be separated
 # with a space
-memcached.servers = memcached:11211
+memcached.servers = $RG_MEMCACHED_SERVERS
 
 # Timeout for memcached lookup responses in milliseconds
 # Increase this value if memcached I/O timeouts are occurring
