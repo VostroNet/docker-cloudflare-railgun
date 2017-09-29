@@ -1,4 +1,4 @@
-# rungeict/cloudflare-railgun
+# vostro/cloudflare-railgun
 Dockerfile for cloudflare's railgun
 
 ## Introduction
@@ -32,5 +32,5 @@ https://www.cloudflare.com/website-optimization/railgun/
  -e RG_WAN_PORT=2408 \
  --link railgun-memcached:memcached \
  --restart=always \
- rungeict/cloudflare-railgun
+ vostro/cloudflare-railgun
  ```
